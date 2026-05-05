@@ -1,0 +1,264 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--teal:#0F6E56;--teal-light:#E1F5EE;--teal-mid:#1D9E75;--cream:#F9F7F4;--dark:#1a1a1a;--muted:#5a5a5a}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
+nav{background:#fff;border-bottom:0.5px solid rgba(0,0,0,0.1);padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:68px;position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:36px;height:36px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:20px;height:20px;fill:#fff}
+.logo-text{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--dark)}
+.logo-text span{color:var(--teal)}
+nav ul{display:flex;gap:2rem;list-style:none}
+nav ul li a{text-decoration:none;font-size:14px;font-weight:400;color:var(--muted);transition:color .2s}
+nav ul li a:hover{color:var(--teal)}
+.nav-btn{background:var(--teal);color:#fff;border:none;padding:10px 20px;border-radius:6px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s}
+.nav-btn:hover{background:var(--teal-mid)}
+.hero{background:#fff;padding:5rem 3rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;min-height:520px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;background:var(--teal-light);border-radius:50%;z-index:0;opacity:.5}
+.hero-content{position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--teal-light);color:var(--teal);font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;margin-bottom:1.5rem}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--teal);border-radius:50%;display:inline-block}
+h1{font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:700;line-height:1.15;margin-bottom:1.2rem;color:var(--dark)}
+h1 span{color:var(--teal)}
+.hero-desc{font-size:16px;line-height:1.7;color:var(--muted);max-width:420px;margin-bottom:2rem;font-weight:300}
+.hero-btns{display:flex;gap:12px}
+.btn-primary{background:var(--teal);color:#fff;border:none;padding:14px 28px;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-primary:hover{background:var(--teal-mid);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--teal);border:1.5px solid var(--teal);padding:14px 28px;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-outline:hover{background:var(--teal-light)}
+.hero-image{position:relative;z-index:1;background:var(--teal-light);border-radius:20px;height:340px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-visual{width:100%;height:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:20px}
+.stat-card{background:#fff;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px;border:0.5px solid rgba(0,0,0,0.06)}
+.stat-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--teal)}
+.stat-label{font-size:12px;color:var(--muted)}
+.stats-bar{background:var(--teal);padding:1.5rem 3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center}
+.stat-item{}
+.stat-item .num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff}
+.stat-item .lbl{font-size:13px;color:rgba(255,255,255,0.7);margin-top:2px}
+.section{padding:4rem 3rem}
+.section-header{text-align:center;margin-bottom:3rem}
+.section-tag{font-size:12px;font-weight:500;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.section-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--dark);margin-bottom:12px}
+.section-sub{font-size:15px;color:var(--muted);max-width:480px;margin:0 auto}
+.dept-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dept-card{background:#fff;border-radius:12px;padding:1.5rem;border:0.5px solid rgba(0,0,0,0.07);cursor:pointer;transition:all .2s}
+.dept-card:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,110,86,0.1)}
+.dept-icon{width:44px;height:44px;background:var(--teal-light);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:20px}
+.dept-name{font-weight:500;font-size:15px;color:var(--dark);margin-bottom:4px}
+.dept-desc{font-size:13px;color:var(--muted)}
+.doctors-section{background:#fff}
+.doctors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.doc-card{background:var(--cream);border-radius:14px;padding:1.5rem;text-align:center;border:0.5px solid rgba(0,0,0,0.06);transition:all .2s}
+.doc-card:hover{border-color:var(--teal);box-shadow:0 4px 20px rgba(15,110,86,0.08)}
+.doc-avatar{width:72px;height:72px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:24px;font-weight:700}
+.doc-name{font-weight:500;font-size:16px;color:var(--dark);margin-bottom:4px}
+.doc-spec{font-size:13px;color:var(--teal);font-weight:500;margin-bottom:8px}
+.doc-exp{font-size:12px;color:var(--muted);background:#fff;padding:4px 10px;border-radius:20px;display:inline-block}
+.appt-section{background:var(--teal);padding:4rem 3rem}
+.appt-inner{max-width:680px;margin:0 auto;text-align:center}
+.appt-section h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:#fff;margin-bottom:12px}
+.appt-section p{color:rgba(255,255,255,0.75);font-size:16px;margin-bottom:2rem}
+.appt-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.appt-form input,.appt-form select{background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.25);border-radius:8px;padding:13px 16px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;width:100%;outline:none}
+.appt-form input::placeholder{color:rgba(255,255,255,0.5)}
+.appt-form select option{color:var(--dark);background:#fff}
+.appt-form .full{grid-column:span 2}
+.appt-form .submit-btn{grid-column:span 2;background:#fff;color:var(--teal);border:none;padding:14px;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.appt-form .submit-btn:hover{background:var(--teal-light)}
+footer{background:var(--dark);padding:3rem;color:rgba(255,255,255,0.6);font-size:14px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2rem}
+.footer-brand .logo-text{color:#fff}
+.footer-brand p{margin-top:12px;line-height:1.6;max-width:260px;font-size:13px}
+.footer-col h4{color:#fff;font-weight:500;font-size:14px;margin-bottom:12px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul li a{color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;font-size:13px}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:0.5px solid rgba(255,255,255,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center}
+.emergency-bar{background:#E24B4A;padding:.6rem 3rem;display:flex;align-items:center;justify-content:center;gap:1rem}
+.emergency-bar span{color:#fff;font-size:14px;font-weight:500}
+.emergency-bar a{color:#fff;font-weight:700;text-decoration:none;font-size:15px}
+</style>
+
+<div class="emergency-bar">
+  <span>🚨 Emergency Helpline:</span>
+  <a href="#">+92-21-111-000-911</a>
+  <span>|</span>
+  <span>24/7 Available</span>
+</div>
+
+<nav>
+  <div class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 3.2l6.5 3.25L12 11.7 5.5 8.45 12 5.2zM4 9.3l7 3.5V19L4 15.5V9.3zm9 10.2v-6.2l7-3.5V15.5L13 19.5z"/></svg>
+    </div>
+    <div class="logo-text">Shifa<span>Care</span> Hospital</div>
+  </div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Departments</a></li>
+    <li><a href="#">Doctors</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <button class="nav-btn">Appointment Book Karein</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Karachi ka Bharosa</div>
+    <h1>Aapki Sehat,<br>Hamari <span>Zimmedari</span></h1>
+    <p class="hero-desc">ShifaCare Hospital mein tajrubakaar doctors aur jadeed technology ke saath aapko best medical care milti hai. Har marz ka ilaj, har waqt.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="sendPrompt('Mujhe appointment book karne mein madad karo')">Appointment Lein ↗</button>
+      <button class="btn-outline">Doctors Dekhein</button>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-visual">
+      <div class="stat-card"><div class="stat-num">25+</div><div class="stat-label">Saal ka Tajruba</div></div>
+      <div class="stat-card"><div class="stat-num">200+</div><div class="stat-label">Expert Doctors</div></div>
+      <div class="stat-card"><div class="stat-num">50K+</div><div class="stat-label">Mutmain Marez</div></div>
+      <div class="stat-card"><div class="stat-num">24/7</div><div class="stat-label">Emergency Khidmat</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item"><div class="num">15+</div><div class="lbl">Departments</div></div>
+  <div class="stat-item"><div class="num">500+</div><div class="lbl">Hospital Beds</div></div>
+  <div class="stat-item"><div class="num">98%</div><div class="lbl">Kamyabi ki Sharch</div></div>
+  <div class="stat-item"><div class="num">3</div><div class="lbl">Branches Karachi</div></div>
+</div>
+
+<section class="section" style="background:var(--cream)">
+  <div class="section-header">
+    <div class="section-tag">Hamari Khadmaat</div>
+    <div class="section-title">Hamara Departments</div>
+    <p class="section-sub">Jadeed equipment aur maahir doctors ke saath 15 se zyada specialities mein ilaj</p>
+  </div>
+  <div class="dept-grid">
+    <div class="dept-card"><div class="dept-icon">❤️</div><div class="dept-name">Cardiology</div><div class="dept-desc">Dil ki bimariyon ka ilaj</div></div>
+    <div class="dept-card"><div class="dept-icon">🧠</div><div class="dept-name">Neurology</div><div class="dept-desc">Dimagh aur nerves ka ilaj</div></div>
+    <div class="dept-card"><div class="dept-icon">🦴</div><div class="dept-name">Orthopedics</div><div class="dept-desc">Haddi aur joints ka ilaj</div></div>
+    <div class="dept-card"><div class="dept-icon">👶</div><div class="dept-name">Pediatrics</div><div class="dept-desc">Bachon ki sehat ki dekhbhal</div></div>
+    <div class="dept-card"><div class="dept-icon">👁️</div><div class="dept-name">Ophthalmology</div><div class="dept-desc">Aankhon ka mukamal ilaj</div></div>
+    <div class="dept-card"><div class="dept-icon">🫁</div><div class="dept-name">Pulmonology</div><div class="dept-desc">Phephdon ka ilaj</div></div>
+    <div class="dept-card"><div class="dept-icon">🩺</div><div class="dept-name">General Medicine</div><div class="dept-desc">Aam amraaz ka ilaj</div></div>
+    <div class="dept-card"><div class="dept-icon">🔬</div><div class="dept-name">Oncology</div><div class="dept-desc">Cancer ka mukamal ilaj</div></div>
+  </div>
+</section>
+
+<section class="section doctors-section">
+  <div class="section-header">
+    <div class="section-tag">Hamare Experts</div>
+    <div class="section-title">Hamare Namwar Doctors</div>
+    <p class="section-sub">Pakistan aur bairaon mulk se trained, tajrubakaar aur meharbaan doctors</p>
+  </div>
+  <div class="doctors-grid">
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:#E1F5EE;color:#0F6E56">AA</div>
+      <div class="doc-name">Dr. Amjad Ahmed</div>
+      <div class="doc-spec">Senior Cardiologist</div>
+      <div class="doc-exp">20 saal tajruba</div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:#EEEDFE;color:#534AB7">SF</div>
+      <div class="doc-name">Dr. Sara Farooq</div>
+      <div class="doc-spec">Neurologist</div>
+      <div class="doc-exp">15 saal tajruba</div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:#FAECE7;color:#993C1D">RK</div>
+      <div class="doc-name">Dr. Rizwan Khan</div>
+      <div class="doc-spec">Orthopedic Surgeon</div>
+      <div class="doc-exp">18 saal tajruba</div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:#E6F1FB;color:#185FA5">NA</div>
+      <div class="doc-name">Dr. Nadia Ali</div>
+      <div class="doc-spec">Pediatrician</div>
+      <div class="doc-exp">12 saal tajruba</div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:#FAEEDA;color:#854F0B">HM</div>
+      <div class="doc-name">Dr. Hasan Mirza</div>
+      <div class="doc-spec">Oncologist</div>
+      <div class="doc-exp">22 saal tajruba</div>
+    </div>
+    <div class="doc-card">
+      <div class="doc-avatar" style="background:#EAF3DE;color:#3B6D11">ZB</div>
+      <div class="doc-name">Dr. Zara Baig</div>
+      <div class="doc-spec">Pulmonologist</div>
+      <div class="doc-exp">10 saal tajruba</div>
+    </div>
+  </div>
+</section>
+
+<section class="appt-section">
+  <div class="appt-inner">
+    <h2>Appointment Book Karein</h2>
+    <p>Aasaan aur tez — sirf 2 minute mein apna appointment secure karein</p>
+    <div class="appt-form">
+      <input type="text" placeholder="Aapka Naam" />
+      <input type="tel" placeholder="Phone Number" />
+      <select>
+        <option value="">Department Chunein</option>
+        <option>Cardiology</option>
+        <option>Neurology</option>
+        <option>Orthopedics</option>
+        <option>Pediatrics</option>
+        <option>Ophthalmology</option>
+        <option>General Medicine</option>
+      </select>
+      <input type="date" />
+      <button class="submit-btn full" onclick="sendPrompt('Mere liye hospital appointment confirm kar do')">Appointment Confirm Karein ↗</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 3.2l6.5 3.25L12 11.7 5.5 8.45 12 5.2zM4 9.3l7 3.5V19L4 15.5V9.3zm9 10.2v-6.2l7-3.5V15.5L13 19.5z"/></svg></div>
+        <div class="logo-text">Shifa<span>Care</span></div>
+      </div>
+      <p>Karachi mein aapki sehat ki sabse bharosemand jagah. 25 saal se zyada ka tajruba, jadeed ilaj.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Departments</a></li>
+        <li><a href="#">Doctors</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Emergency Care</a></li>
+        <li><a href="#">Lab Tests</a></li>
+        <li><a href="#">Radiology</a></li>
+        <li><a href="#">Pharmacy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">+92-21-111-000-911</a></li>
+        <li><a href="#">info@shifacare.pk</a></li>
+        <li><a href="#">Block 5, Clifton, Karachi</a></li>
+        <li><a href="#">Sat-Thu: 8am – 10pm</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ShifaCare Hospital. Tamam huqooq mahfooz hain.</span>
+    <span>Designed with ❤️ for Pakistan</span>
+  </div>
+</footer>
