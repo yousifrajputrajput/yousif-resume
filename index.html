@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Muhammad Yousif Rajput — Creative Full-Stack Developer Portfolio. Specializing in modern web development with HTML, CSS, JavaScript, and more.">
+  <title>Muhammad Yousif Rajput | Full-Stack Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ★ Cinematic Warp Intro ★ -->
+  <div id="warpIntro">
+    <canvas id="warpCanvas"></canvas>
+    <div class="warp-overlay"></div>
+    <div class="warp-text">
+      <div class="warp-welcome">Welcome to my Universe</div>
+      <div class="warp-name">Muhammad Yousif Rajput</div>
+      <div class="warp-tagline">Full-Stack Developer</div>
+    </div>
+    <div class="warp-flash"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Yousif<span style="color:var(--accent-light)">.</span>Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span> Available for Work
+        </div>
+        <h1>Hi, I'm <span class="gradient-text">Muhammad Yousif Rajput</span></h1>
+        <p class="subtitle">A passionate Full-Stack Developer crafting modern, responsive, and pixel-perfect web
+          experiences that leave a lasting impression.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i>&nbsp; View Projects</a>
+          <a href="#contact" class="btn-outline"><i class="fas fa-envelope"></i>&nbsp; Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-avatar-wrap">
+          <img src="C:\Users\ADMIN\Downloads/esc.jpg" alt="Muhammad Yousif Rajput Avatar">
+        </div>
+        <div class="floating-card card-1">
+          <div class="num">5+</div>
+          <div>Projects Done</div>
+        </div>
+        <div class="floating-card card-2">
+          <div class="num">⭐ 4.9</div>
+          <div>Client Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Know Me Better</h2>
+        <p class="section-subtitle">Discover my journey, passion, and the drive behind every line of code.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <img src="C:\Users\ADMIN\Downloads/the.jpeg" alt="Developer Workspace">
+          <div class="about-image-overlay"></div>
+        </div>
+        <div class="about-text reveal">
+          <p>Hello! I'm <strong>Muhammad Yousif Rajput</strong>, a creative and dedicated full-stack web developer based
+            in Pakistan. I love transforming ideas into beautiful, functional websites.</p>
+          <p>My expertise spans across <strong>HTML, CSS, JavaScript, PHP, MySQL</strong>, and modern frameworks. I
+            focus on creating clean code and intuitive user interfaces that deliver exceptional experiences.</p>
+          <p>Whether it's a stunning portfolio, a dynamic restaurant platform, or a hospital management system — I bring
+            ideas to life with precision and creativity.</p>
+          <div class="about-stats">
+            <div class="stat-box">
+              <div class="stat-num" data-target="5">0</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-target="10">0</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" data-target="100">0</div>
+              <div class="stat-label">% Dedication</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Skills</span>
+        <h2 class="section-title">Technologies I Work With</h2>
+        <p class="section-subtitle">Tools and languages I use to bring ideas to life.</p>
+      </div>
+      <div class="skills-wrapper reveal">
+        <!-- Frontend -->
+        <h3 class="skills-category">Frontend Development</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-html5" style="color:#e44d26;"></i></div>
+            <div class="skill-name">HTML5 <span class="skill-percent">95%</span></div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="95%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-css3-alt" style="color:#264de4;"></i></div>
+            <div class="skill-name">CSS3 <span class="skill-percent">90%</span></div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="90%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-js" style="color:#f7df1e;"></i></div>
+            <div class="skill-name">JavaScript <span class="skill-percent">85%</span></div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="85%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-bootstrap" style="color:#7952b3;"></i></div>
+            <div class="skill-name">Bootstrap <span class="skill-percent">88%</span></div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="88%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-react" style="color:#61dafb;"></i></div>
+            <div class="skill-name">React <span class="skill-percent">70%</span></div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <h3 class="skills-category" style="margin-top: 50px;">Backend & Database</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-php" style="color:#777bb3;"></i></div>
+            <div class="skill-name">PHP <span class="skill-percent">75%</span></div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="75%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-database" style="color:#00758f;"></i></div>
+            <div class="skill-name">MySQL <span class="skill-percent">78%</span></div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="78%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fab fa-git-alt" style="color:#f05032;"></i></div>
+            <div class="skill-name">Git <span class="skill-percent">80%</span></div>
+            <div class="skill-level">
+              <div class="skill-level-bar" data-width="80%"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A showcase of my recent work and creative endeavors.</p>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img class="project-img"
+              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop"
+              alt="Restaurant Website">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">MySQL</span>
+            </div>
+            <h3>Restaurant E-Commerce</h3>
+            <p>A full-stack restaurant website with admin dashboard, online ordering, and menu management system.</p>
+            <div class="project-links">
+              <a href="https://yousifrestaurent.lovable.app/" target="_blank" class="project-link primary-link"><i class="fas fa-eye"></i>&nbsp; Live Demo</a>
+              <a href="https://github.com/yousifrajputrajput" target="_blank" class="project-link"><i class="fab fa-github"></i>&nbsp; Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img class="project-img"
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop"
+              alt="Hospital Website">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <h3>Yousif Hospital Website</h3>
+            <p>Modern healthcare website with appointment booking, emergency section, doctor profiles, and gallery.</p>
+            <div class="project-links">
+              <a href="hospital_website.html" target="_blank" class="project-link primary-link"><i class="fas fa-eye"></i>&nbsp; Live Demo</a>
+              <a href="https://github.com/yousifrajputrajput" target="_blank" class="project-link"><i class="fab fa-github"></i>&nbsp; Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img class="project-img"
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+              alt="Portfolio Website">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JS</span>
+            </div>
+            <h3>Personal Portfolio</h3>
+            <p>A stunning developer portfolio with smooth animations, dark theme, and responsive design.</p>
+            <div class="project-links">
+              <a href="index.html" target="_blank" class="project-link primary-link"><i class="fas fa-eye"></i>&nbsp; Live Demo</a>
+              <a href="https://github.com/yousifrajputrajput" target="_blank" class="project-link"><i class="fab fa-github"></i>&nbsp; Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Services</span>
+        <h2 class="section-title">What I Offer</h2>
+        <p class="section-subtitle">Professional services tailored to your needs.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>Creating beautiful, intuitive interfaces that deliver exceptional user experiences with modern design
+            principles.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>Building responsive, fast, and scalable websites using the latest technologies and best practices.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔧</div>
+          <h3>Backend Development</h3>
+          <p>Robust server-side solutions with PHP and MySQL for secure, efficient data management.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Pixel-perfect designs that look stunning on every device — mobile, tablet, and desktop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What People Say</h2>
+        <p class="section-subtitle">Feedback from clients and collaborators.</p>
+      </div>
+      <div class="testimonials-track reveal">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Yousif delivered an outstanding website for our restaurant. His attention to detail and creative
+            approach exceeded all expectations!"</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="testimonial-name">Ahmed Khan</div>
+              <div class="testimonial-role">Restaurant Owner</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Professional, creative, and highly skilled. Yousif built a modern, responsive hospital website —
+            exactly what we needed."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div>
+              <div class="testimonial-name">Dr. Sara Malik</div>
+              <div class="testimonial-role">Hospital Director</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"Working with Yousif was an amazing experience. He understood our vision perfectly and delivered a
+            stunning final product."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">U</div>
+            <div>
+              <div class="testimonial-name">Usman Ali</div>
+              <div class="testimonial-role">Tech Startup Founder</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" style="background:var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Have a project in mind? Let's bring it to life.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-cards reveal">
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>yousif.webdesigner@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+92 328 3694752</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Location</h4>
+              <p>Pakistan</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+92 328 3694752</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="userName" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="userEmail" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="userSubject" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <textarea id="userMessage" placeholder="Your Message..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <i class="fas fa-paper-plane"></i>&nbsp; Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-socials">
+      <a href="#" href="https://github.com/yousifrajputrajput" target="_blank" aria-label="GitHub"><i
+          class="fab fa-github"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2026 Muhammad Yousif Rajput. All Rights Reserved. Built with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
